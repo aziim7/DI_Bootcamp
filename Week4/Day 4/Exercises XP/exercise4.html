@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="listBooks"></div>
+
+    <script>
+        let allBooks = [
+            {
+                title: "Think and Grow Rich",
+                author: "Napoleon Hill",
+                image: "https://www.napoleonhill.com",
+                alreadyRead: true
+            },
+            {
+                title: "How to make friends and influence others",
+                author: "Dale Carnegie",
+                image: "https://www.dalecarnegie.com",
+                alreadyRead: false
+            },
+
+            {
+                title: "How to make friends and influence others",
+                author: "Dale Carnegie",
+                image: "https://www.dalecarnegie.com",
+                alreadyRead: false
+            }
+        ];
+
+        function renderBooks() {
+            let table = document.createElement('table');
+            let tbody = document.createElement('tbody');
+
+            for (let i = 0; i < allBooks.length; i++) {
+                let book = allBooks[i];
+
+                let row = tbody.insertRow();
+                let cell1 = row.insertCell();
+                let cell2 = row.insertCell();
+
+                let image = document.createElement('img');
+                image.src = book.image;
+                image.width = 100;
+
+                cell1.appendChild(image);
+                cell2.textContent = (book.title+' written by  '+book.author+'.');
+
+                if (book.alreadyRead == "true") {
+                    cell2.style.color = 'red';
+                }
+            }
+
+            table.appendChild(tbody);
+            document.querySelector('.listBooks').appendChild(table);
+        }
+
+        renderBooks();
+    </script>
+</body>
+
+</html>

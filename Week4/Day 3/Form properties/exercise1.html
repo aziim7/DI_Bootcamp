@@ -1,0 +1,46 @@
+<select id="school-type"> 
+    <option value="middleschool">Middle School</option>
+    <option value="university">University</option>
+    <option value="college">College</option>
+</select>
+
+<script>
+    let dropdown = document.getElementById('school-type');
+    let second = dropdown.options[1].value;
+    console.log(second);
+
+
+
+
+
+    
+ let option = document.createElement('option');
+ option.value = ('Work');
+ option.text = ('Work');
+  dropdown.add(option);
+  console.log(dropdown);
+
+  let option2 = document.createElement('option');
+  option2.value = ('Primary School');
+  option2.text = ('Primary School');
+  dropdown.insertBefore(option2, dropdown.firstChild);
+  console.log(dropdown);
+
+  dropdown.options[3].selected = true;
+    console.log(dropdown.value);
+
+    dropdown.options[4].selected = true;
+    console.log(dropdown.value);
+
+    
+</script>
+
+<button id="alert-button">Alert Selected Choice</button>
+<script>
+    let button = document.getElementById('alert-button');
+    button.addEventListener('click', function() {
+        let selectedValue = dropdown.value;
+        alert('Selected choice: ' + selectedValue);
+    });
+</script>
+

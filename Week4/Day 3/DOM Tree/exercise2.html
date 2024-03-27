@@ -1,0 +1,62 @@
+<html>
+<body>
+  <div id="container">Users:</div>
+  <ul class="list">
+    <li>John</li>
+    <li>Pete</li>
+  </ul>
+  <ul class="list">
+    <li>Sarah</li>
+    <li>Dan</li>
+  </ul>
+</body>
+
+<script>
+   let text = document.getElementById("container").innerHTML;
+        console.log("This is the first heading " + text);
+</script>
+
+    <script>
+    let text1 = document.getElementsByTagName('div');
+         console.log("This is the first heading " + text1[0].innerHTML);
+    </script>
+
+     <script>
+         let text2 = document.getElementsByTagName('ul');
+
+            
+
+    </script>
+        
+
+<script>
+    let text3 = document.querySelectorAll('ul');
+        for (let i=0; i<text3.length; i++){
+
+        console.log(text3[i].innerHTML);
+}
+</script>
+
+<script>
+    let text4 = document.getElementsByTagName('ul');
+    for (let m of text4){
+            console.log(m.innerHTML);
+        }
+
+</script>
+
+<script>
+    let text5 = document.querySelectorAll('ul > li:last-child');
+        
+
+        for (let x of text5){
+            console.log(x.innerHTML);
+        }
+
+</script>
+
+
+
+
+
+</html>

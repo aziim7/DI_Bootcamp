@@ -1,0 +1,39 @@
+<div id="container">Users:</div>
+<ul class="list">
+    <li>John</li>
+    <li>Pete</li>
+</ul>
+<ul class="list">
+    <li>David</li>
+    <li>Sarah</li>
+    <li>Dan</li>
+</ul>
+
+
+<script>
+    let x = document.getElementById('container');
+    console.log(x);
+
+    let ul = document.getElementsByTagName('ul')[0]; 
+    let lis = ul.getElementsByTagName('li'); 
+    let pete = lis[1]; 
+    console.log(pete.textContent);
+    pete.textContent = 'Richard';
+    console.log(pete.textContent);
+
+    let ul1 = document.getElementsByTagName('ul')[1];
+    let lis1 = ul1.getElementsByTagName('li');
+    let sarah = lis1[1];
+    console.log(sarah.textContent);
+    ul1.removeChild(sarah);
+    console.log(ul1.textContent);
+
+    let uls = document.getElementsByTagName('ul'); 
+    for (let ul of uls) {
+        let lis = ul.getElementsByTagName('li'); 
+        if (lis.length > 0) {
+            lis[0].textContent = 'try_harder'; 
+        }
+    }
+
+</script>
